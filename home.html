@@ -20,12 +20,15 @@
         var confirm = document.getElementById('retype').value;
         var display = document.getElementById('nomatch');
         if(pass==confirm){
-           display.innerHTML = ""
-        }else{
+         display.innerHTML = ""
+         return true;
+        }
+        else{
             display.style.color = "#ff0000"; //red
             display.innerHTML = "Passwords Do Not Match!"
+            return false;
         }
-    }  
+    }
 </script>
 </head>
 <body>
@@ -48,11 +51,12 @@
             <p><label>Last Name: <input type="text" name="lastname" placeholder="Doe" autocomplete="on" required></label></p>
             <p><label>Phone: <input type="Phone" name="phone" required></label></p>
             <p><label>Email: <input type="email" name="email" placeholder="name@domain.com" required></label></p>
-            <p><label>Password: <input type="Password" name="password" id="password" required></label></p>
+            <p><label>Password: <input type="password" name="password" id="password" required></label></p>
             <p><label>Retype Password: <input type="password" name="retype" id="retype" required onkeyup="passMatch();"></label></p>  
             <span id="nomatch"></span>
-            <p><input type="submit" name="login" value="Sign Up"></p>
-        </form>
-    </div>
-</body>
-</html>
+            <p><input type="submit" name="login" value="Sign Up"
+                onclick="return passMatch();"></p>
+            </form>
+        </div>
+    </body>
+    </html>
