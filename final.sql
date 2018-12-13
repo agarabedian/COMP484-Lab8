@@ -1,5 +1,4 @@
 CREATE DATABASE finaldb;
-SHOW DATABASE;
 USE finaldb;
 
 CREATE TABLE auth(
