@@ -5,8 +5,10 @@
     <title>Home</title>
     <style type="text/css">
     .allign {
-        width: 250px;
+        width: 300px;
         clear: both;
+        margin: auto;
+    	padding: 30px;
     }
 
     .allign input {
@@ -32,20 +34,15 @@
 </script>
 </head>
 <body>
-    <nav>
-        <a href = "#login">Log in</a>
-        <a href ="#signup">Sign Up</a>
-    </nav>
-
     <div class="allign">
-        <form id= "login" method="POST" action="login.php">
+        <form method="POST" action="login.php">
             <h1>Registered Users</h1>
             <p><label>Username: <input type="text" name="username" autocomplete="on" autofocus required></label></p>
             <p><label>Password: <input type="password" name="password" required></label></p>
             <p><input type="submit" name="login" value="Log in"></p>
         </form>
 
-        <form id="signup"  method="POST" action="signup.php">
+        <form method="POST" action="signup.php">
             <h1>New Users</h1>
             <p><label>First Name: <input type="text" name="firstname" placeholder="John" autocomplete="on" required></label></p>
             <p><label>Last Name: <input type="text" name="lastname" placeholder="Doe" autocomplete="on" required></label></p>

@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Login PHP</title>
+	<title>Login</title>
 </head>
 <body>
 <?php
